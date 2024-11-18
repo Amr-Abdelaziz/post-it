@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import { Download, History, LoaderIcon, RefreshCcw, RefreshCcwDot } from "lucide-react";
+import { Download, LoaderIcon, RefreshCcw } from "lucide-react";
 
 interface Meme {
   id: string;
@@ -22,7 +22,6 @@ const MemeGenerator: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const memePreviewRef = useRef<HTMLDivElement | null>(null);
 
-  // Fetch memes on component mount
   useEffect(() => {
     const fetchMemes = async () => {
       const res = await axios.get("https://api.imgflip.com/get_memes");
@@ -83,12 +82,11 @@ const MemeGenerator: React.FC = () => {
       
       const link = document.createElement("a");
       link.href = url;
-      link.download = `meme-${selectedMeme?.name}.png`; // Set file name for download
+      link.download = `posit-meme-${selectedMeme?.name}.png`; 
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
   
-      // Release the object URL after download
       window.URL.revokeObjectURL(url);
     } catch (error) {
       console.error("Error downloading meme:", error);

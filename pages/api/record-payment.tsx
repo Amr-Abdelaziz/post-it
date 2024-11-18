@@ -1,7 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { payments } from '@/utils/schema';
 import { drizzle } from 'drizzle-orm/node-postgres';
-// import { supabase } from '@/lib/supabaseClient';
 import { supabase } from '@/utils/supabaseClient';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

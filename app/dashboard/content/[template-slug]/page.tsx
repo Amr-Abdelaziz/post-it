@@ -10,7 +10,6 @@ import { ArrowLeftCircle } from 'lucide-react';
 import Link from 'next/link';
 import { chatSession } from '@/utils/AIModal';
 import { useUser } from '@clerk/nextjs';
-import moment from 'moment';
 import { TotalUsageContext } from '@/app/(context)/TotalUsageContext';
 import { useRouter } from 'next/navigation';
 
@@ -64,13 +63,13 @@ function CreateNewContent(props: PROPS) {
   
       if (!response.ok) {
         const errorData = await response.json();
-        console.error('Error saving to database:', errorData); // Log the error details
+        console.error('Error saving to database:', errorData); 
       } else {
-        const resultData = await response.json(); // Log the result data
-        console.log('Successfully saved to database:', resultData); // This will include the `result` from the API
+        const resultData = await response.json();
+        console.log('Successfully saved to database:', resultData); 
       }
     } catch (error) {
-      console.error('Error saving content:', error); // Log any other errors
+      console.error('Error saving content:', error); 
     }
   };
   

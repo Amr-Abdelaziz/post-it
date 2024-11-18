@@ -3,7 +3,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-// Meme type for TypeScript
 interface Meme {
   ID: number;
   name: string;
@@ -14,18 +13,15 @@ interface Meme {
 }
 
 const MemeSubmissionForm = () => {
-  // Form states
   const [name, setName] = useState<string>('');
   const [tags, setTags] = useState<string>('');
   const [image, setImage] = useState<string>('');
   const [topText, setTopText] = useState<string>('');
   const [bottomText, setBottomText] = useState<string>('');
 
-  // Meme list state
   const [memes, setMemes] = useState<Meme[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
-  // Fetch memes when the component mounts
   useEffect(() => {
     const fetchMemes = async () => {
       try {

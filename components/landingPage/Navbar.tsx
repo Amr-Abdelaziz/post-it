@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
-import MobileNavbar from './MobileNav'; // Adjust the path if necessary
+import MobileNavbar from './MobileNav'; 
 import { MenuSquare, XSquare } from 'lucide-react';
 import Logo from './Logo';
 
@@ -20,7 +20,7 @@ function Navbar() {
   };
 
   return (
-    <div className='sticky top-0 z-50 backdrop-blur-md bg-white/30 lg:px-[50px] px-5 flex items-center shadow justify-between w-full h-20'>
+    <div className='sticky overflow-hidden top-0 z-50 backdrop-blur-md bg-white/30 lg:px-[50px] px-5 flex items-center shadow justify-between w-full h-20'>
       <Logo/>
 
       <div className="lg:hidden flex items-center">

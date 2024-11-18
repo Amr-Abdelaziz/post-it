@@ -1,6 +1,7 @@
 import { UserButton } from '@clerk/clerk-react'
 import { Search, Menu, MenuSquare } from 'lucide-react' // Import Menu icon
 import React from 'react'
+import ThemeToggle from './ThemeToggle';
 
 function Header({ toggleSidebar }: { toggleSidebar: () => void }) {
   return (
@@ -19,6 +20,9 @@ function Header({ toggleSidebar }: { toggleSidebar: () => void }) {
         <div className="md:hidden block" onClick={toggleSidebar}>
           {/* <Menu className="w-6 h-6" /> */}
           <MenuSquare className="w-6 h-6 text-primary"/>
+        </div>
+        <div className="">
+          <ThemeToggle/>
         </div>
       </div>
     </div>

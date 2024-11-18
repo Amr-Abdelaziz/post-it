@@ -4,7 +4,7 @@ export default [
         desc: 'An AI tool that answers any questions you have.',
         category: 'Utility',
         icon: "https://cdn-icons-png.flaticon.com/128/17621/17621308.png",
-        aiPrompt: 'Answer the following question based on the best available knowledge and make your answers as detailed as you can:',
+        aiPrompt: 'Answer the following question based on the best available knowledge and make your answers as detailed as you can',
         slug: 'generate-question-answer',
         form: [
             {
@@ -20,7 +20,7 @@ export default [
         desc: 'An AI tool that generates blog posts based on the provided outline and niche.',
         category: 'Blog',
         icon: "https://cdn-icons-png.flaticon.com/128/3131/3131611.png" ,
-        aiPrompt: 'Generate a detailed blog post in Rich Text Editor format based on the given niche & outline, with appropriate headings, subheadings, and paragraphs.',
+        aiPrompt: 'Generate a detailed blog post in Rich Text Editor format based on the given niche & outline, with appropriate headings, subheadings, and paragraphs. Make it SEO optimized and also make it lengthy.',
         slug: 'generate-blog-post',
         form: [
             {
@@ -63,7 +63,7 @@ export default [
         desc: 'An AI tool that generates Facebook posts based on the provided idea and audience.',
         category: 'Facebook',
         icon: "https://cdn-icons-png.flaticon.com/128/13808/13808957.png",
-        aiPrompt: 'Generate a Facebook post with appropriate call-to-action based on the given idea and audience.',
+        aiPrompt: 'Generate a Facebook post with appropriate call-to-action based on the given idea, tone and audience.',
         slug: 'generate-facebook-post',
         form: [
             {
@@ -76,6 +76,11 @@ export default [
                 label: 'Enter target audience',
                 field: 'textarea',
                 name: 'audience'
+            },
+            {
+                label: 'What tone would you like? (Professional tone)',
+                field: 'textarea',
+                name: 'Tone'
             }
         ]
     },
@@ -84,7 +89,7 @@ export default [
         desc: 'An AI tool that generates content ideas for Facebook posts.',
         category: 'Facebook',
         icon: "https://cdn-icons-png.flaticon.com/128/2626/2626269.png" ,
-        aiPrompt: 'Give me 5 engaging Facebook content ideas based on the provided niche and target audience.',
+        aiPrompt: 'As a facebook social media expert, give me 5 engaging Facebook content ideas based on the provided niche and target audience.',
         slug: 'generate-facebook-content-ideas',
         form: [
             {
@@ -105,7 +110,7 @@ export default [
         desc: 'An AI tool that generates a captivating bio for your Facebook profile.',
         category: 'Facebook',
         icon: "https://cdn-icons-png.flaticon.com/128/15051/15051154.png",
-        aiPrompt: 'Generate a creative and engaging Facebook bio based on the given personality traits and interests.',
+        aiPrompt: 'Generate a creative and engaging Facebook bio based on the given personality traits and interests and also it should not exceed the number of characters a facebook bio should have. Also sound human.',
         slug: 'generate-facebook-bio',
         form: [
             {
@@ -143,7 +148,7 @@ export default [
         desc: 'An AI tool that generates content ideas for Instagram videos.',
         category: 'Instagram',
         icon: "https://cdn-icons-png.flaticon.com/128/5692/5692184.png",
-        aiPrompt: 'Give me 5 creative Instagram video content ideas based on the provided niche and theme.',
+        aiPrompt: 'As an social media Instagram expert, give me 5 creative Instagram video content ideas based on the provided niche and theme.',
         slug: 'generate-instagram-video-ideas',
         form: [
             {
@@ -164,7 +169,7 @@ export default [
         desc: 'An AI tool that creates an engaging Instagram bio to attract followers.',
         category: 'Instagram',
         icon: "https://cdn-icons-png.flaticon.com/128/2111/2111463.png",
-        aiPrompt: 'Generate a creative and captivating Instagram bio based on the given theme, niche, and personality traits.',
+        aiPrompt: 'Generate a creative and captivating Instagram bio based on the given theme, niche, and personality traits and also it should not exceed the number of characters a facebook bio should have. Also sound human.',
         slug: 'generate-instagram-bio',
         form: [
             {
@@ -186,7 +191,7 @@ export default [
         desc: 'An AI tool that helps you find the best keywords for your content or campaign.',
         category: 'SEO',
         icon: "https://cdn-icons-png.flaticon.com/128/6155/6155914.png",
-        aiPrompt: 'Generate a list of 10 high-ranking keywords based on the provided niche and audience. Include search volume and keyword difficulty. Include sub-keywords too',
+        aiPrompt: 'As an SEO expert, generate a list of 10 high-ranking keywords based on the provided niche and audience. Include search volume and keyword difficulty. Include sub-keywords too',
         slug: 'keyword-research-tool',
         form: [
             {
@@ -235,7 +240,7 @@ export default [
         desc: 'An AI tool that generates engaging LinkedIn content based on the given topic and target audience.',
         category: 'LinkedIn',
         icon: "https://cdn-icons-png.flaticon.com/128/14449/14449766.png",
-        aiPrompt: 'Generate a professional and engaging LinkedIn post based on the provided topic and audience. Include relevant insights, call-to-actions, and hashtags.',
+        aiPrompt: 'As a Linkedin professional with years of experence, generate a professional and engaging LinkedIn post based on the provided topic and audience. Include relevant insights, call-to-actions, and hashtags.',
         slug: 'generate-linkedin-content',
         form: [
             {
@@ -333,7 +338,7 @@ export default [
         desc: 'An AI tool that generates content ideas for TikTok videos.',
         category: 'TikTok',
         icon: "https://cdn-icons-png.flaticon.com/128/4782/4782345.png",
-        aiPrompt: 'Give me 5 creative TikTok video content ideas based on the provided niche and trend.',
+        aiPrompt: 'As a social media tiktok professional, give me 5 creative TikTok video content ideas based on the provided niche and trend.',
         slug: 'generate-tiktok-content-ideas',
         form: [
             {
@@ -370,7 +375,7 @@ export default [
         desc: 'An AI tool that generates a concise and impactful X bio.',
         category: 'Twitter',
         icon: "https://cdn-icons-png.flaticon.com/128/5968/5968830.png",
-        aiPrompt: 'Generate a short and engaging X(Twitter) bio based on the given profession, interests, and personality traits.',
+        aiPrompt: 'Generate a short and engaging X(Twitter) bio based on the given profession, interests, and personality traits and also it should not exceed the number of characters a facebook bio should have. Also sound human.',
         slug: 'generate-twitter-bio',
         form: [
             {
@@ -397,7 +402,7 @@ export default [
         desc: 'An AI tool that creates engaging X threads based on the given topic and key points.',
         category: 'Twitter',
         icon: "https://cdn-icons-png.flaticon.com/128/5969/5969020.png",
-        aiPrompt: 'Create a detailed X(Twitter) thread based on the provided topic and key points. Ensure each tweet is concise, engaging, and includes relevant hashtags.',
+        aiPrompt: 'As a professional twitter social media expert, create a detailed X(Twitter) thread based on the provided topic and key points. Ensure each tweet is concise, engaging, and includes a few relevant hashtags. Sound very human.',
         slug: 'generate-twitter-thread',
         form: [
             {
@@ -411,20 +416,15 @@ export default [
                 field: 'textarea',
                 name: 'keyPoints',
                 required: true
-            },
-            {
-                label: 'Include hashtags (optional)',
-                field: 'textarea',
-                name: 'hashtags'
             }
         ]
     },    
     {
-        name: 'YouTube Content Generator',
+        name: 'YouTube Video Scripter',
         desc: 'An AI tool that generates YouTube video scripts and content ideas.',
         category: 'YouTube',
         icon: "https://cdn-icons-png.flaticon.com/128/1409/1409936.png",
-        aiPrompt: 'Generate a YouTube video script based on the given niche and outline, including an engaging intro and outro.',
+        aiPrompt: 'As a professional YouTuber, generate a YouTube video script based on the given niche and outline, including an engaging intro and outro.',
         slug: 'generate-youtube-content',
         form: [
             {
@@ -446,7 +446,7 @@ export default [
         desc: 'An AI tool that generates optimized YouTube titles, descriptions, and tags.',
         category: 'SEO',
         icon: "https://cdn-icons-png.flaticon.com/128/15714/15714787.png" ,
-        aiPrompt: 'Generate optimized YouTube titles, descriptions, and tags based on the given video content and keywords.',
+        aiPrompt: 'As a professional YouTuber, generate optimized YouTube titles, descriptions, and tags based on the given video content and keywords.',
         slug: 'generate-youtube-seo',
         form: [
             {

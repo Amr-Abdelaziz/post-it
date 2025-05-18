@@ -1,6 +1,6 @@
 import { db } from '@/utils/db';
 import { aiOutPut } from '@/utils/schema';
-import { currentUser } from '@clerk/nextjs/server';
+import { auth } from '@clerk/nextjs';
 import { desc, eq } from 'drizzle-orm';
 import React from 'react';
 import Templates from '@/app/(data)/Templates';
@@ -15,7 +15,6 @@ export interface HISTORY {
     createdAt: string | null;  // Allow null values
 }
 
-
 const GetTemplateName = (slug: string) => {
     const template = Templates?.find((item) => item.slug === slug);
     return template ? template.name : 'Unknown Template';
@@ -27,16 +26,17 @@ const GetTemplateImage = (slug: string) => {
 };
 
 const History = async () => {
-    const user = await currentUser();
+    const { userId } = auth();
+    const user = await auth().user;
 
-    if (!user || !user.primaryEmailAddress?.emailAddress) {
+    if (!userId || !user?.emailAddresses?.[0]?.emailAddress) {
         return <div>Please log in to view your history.</div>;
     }
 
     const historyList: HISTORY[] = await db
         .select()
         .from(aiOutPut)
-        .where(eq(aiOutPut?.createdBy, user?.primaryEmailAddress?.emailAddress))
+        .where(eq(aiOutPut?.createdBy, user.emailAddresses[0].emailAddress))
         .orderBy(desc(aiOutPut.id));
 
     return (
@@ -95,7 +95,6 @@ const History = async () => {
                                 </td>
 
                                 <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                                    {/* {new Date(history.createdAt).toLocaleString()} */}
                                     {history.createdAt}
                                 </td>
 
